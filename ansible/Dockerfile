@@ -6,6 +6,7 @@ RUN apk add --no-cache \
         openssl \
         openssl-dev \
         python3-dev \
+        rsync \
     && pip install ansible requests \
     && apk del \
         build-base \
