@@ -1,4 +1,4 @@
-FROM python:alpine3.7
+FROM alpine:3.7
 
 RUN apk add --no-cache \
         build-base \
@@ -6,11 +6,8 @@ RUN apk add --no-cache \
         openssh \
         openssl \
         openssl-dev \
+        python3 \
         python3-dev \
         rsync \
-    && pip install tox \
-    && apk del \
-        build-base \
-        libffi-dev \
-        openssl-dev \
-        python3-dev
+    && ln -s /usr/bin/python3 /usr/bin/python \
+    && pip install --no-cache-dir tox
