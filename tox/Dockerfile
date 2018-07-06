@@ -10,4 +10,4 @@ RUN apk add --no-cache \
         python3-dev \
         rsync \
     && ln -s /usr/bin/python3 /usr/bin/python \
-    && pip install --no-cache-dir tox
+    && pip3 install --no-cache-dir tox
