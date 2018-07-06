@@ -8,7 +8,7 @@ RUN apk add --no-cache \
         openssl-dev \
         python3-dev \
         rsync \
-    && pip install ansible requests \
+    && pip install tox \
     && apk del \
         build-base \
         libffi-dev \
