@@ -2,6 +2,7 @@ FROM alpine:3.8
 
 RUN apk add --no-cache \
         build-base \
+        ca-certificates \
         libffi-dev \
         openssh \
         openssl \
