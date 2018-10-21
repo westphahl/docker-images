@@ -4,6 +4,8 @@ RUN apk add --no-cache \
         build-base \
         ca-certificates \
         libffi-dev \
+        libjpeg \
+        libjpeg-turbo-dev \
         openssh \
         openssl \
         openssl-dev \
