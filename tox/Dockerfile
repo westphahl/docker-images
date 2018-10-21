@@ -6,11 +6,14 @@ RUN apk add --no-cache \
         libffi-dev \
         libjpeg \
         libjpeg-turbo-dev \
+        libsass \
+        postgresql-dev \
         openssh \
         openssl \
         openssl-dev \
         python3 \
         python3-dev \
         rsync \
+        zlib-dev \
     && ln -s /usr/bin/python3 /usr/bin/python \
     && pip3 install --no-cache-dir tox
