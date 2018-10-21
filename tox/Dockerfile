@@ -9,8 +9,8 @@ RUN apk add --no-cache \
         libsass \
         postgresql-dev \
         openssh \
-        openssl \
-        openssl-dev \
+        libressl \
+        libressl-dev \
         python3 \
         python3-dev \
         rsync \
