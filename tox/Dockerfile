@@ -1,19 +1,9 @@
-FROM alpine:3.8
+FROM python:3.9-slim
 
-RUN apk add --no-cache \
-        build-base \
-        ca-certificates \
-        libffi-dev \
-        libjpeg \
-        libjpeg-turbo-dev \
-        libsass \
-        postgresql-dev \
-        openssh \
-        libressl \
-        libressl-dev \
-        python3 \
-        python3-dev \
-        rsync \
-        zlib-dev \
-    && ln -s /usr/bin/python3 /usr/bin/python \
-    && pip3 install --no-cache-dir tox
+
+RUN apt-get update && apt-get install -y \
+        ssh \
+    && pip install --no-cache-dir tox \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
